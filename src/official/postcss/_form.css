@@ -1,0 +1,49 @@
+hr {
+    margin: 10px 0;
+}
+pre {
+    color:$deep-green;
+    padding:20px;
+    font-size: 18px;
+    box-shadow: 1px 1px 10px #eee;
+}
+
+.textBlock {
+    padding-left: 10px;
+    border-bottom: 1px solid $deep-grey;
+    height: 35px;
+    line-height: 35px;
+    label {
+        font-size: 14px;
+        margin: 0;
+        @media screen and (max-width: $screen-md-min) {
+            font-size: 2.8vw;
+        }
+    }
+    input {
+        border: none;
+        font-size: 14px;
+        margin: 0;
+        background-color: transparent;
+        @media screen and (max-width: $screen-md-min) {
+            font-size: 2.8vw;
+        }
+        &:focus {
+            outline: none;
+            outline-offset: 0;
+        }
+    }
+}
+
+textarea {
+    border: 1px solid $deep-grey;
+    width: 100%;
+    font-size: 14px;
+    @media screen and (max-width: $screen-md-min) {
+        font-size: 2.8vw;
+    }
+    &:focus {
+        outline: none;
+        outline-offset: 0;
+    }
+}

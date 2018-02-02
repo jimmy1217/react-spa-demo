@@ -1,0 +1,10 @@
+#pageAbout{
+  min-height: 100vh;
+  @media screen and (min-width: $screen-md-min) {
+    min-height: 90vh;
+  }
+  .aboutMap {
+    width:70%;
+    margin: 0 auto;
+  }
+}

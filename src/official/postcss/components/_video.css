@@ -1,0 +1,52 @@
+.vedioWrap {
+  position: relative;
+  max-width: 970px;
+  margin:0 auto;
+  video {
+      max-width: 970px;
+      width: 100%;
+      margin: 0 0 -6px 0;
+  }
+  &:hover {
+      .controlbar{
+          opacity: 1;
+      }    
+  }
+  .controlbar{
+      opacity: 0;
+      position: absolute;
+      bottom:0;
+      left:0;
+      width:100%;
+      margin:0 auto;
+      padding-left:10px;
+      background-color: rgba(255,255,255,.85);
+      display: table;
+      transition: opacity .3s;
+      i {
+          font-size: 18px !important;
+      }
+      .controlbar__info {
+          display: table-cell;
+          vertical-align: middle;
+          width:100px;
+          span {
+              display: inline-block;
+              font-size: 12px;
+          }
+      }
+      .controlbar__bar {
+          display: table-cell;
+          vertical-align: middle;
+      }
+      .controlbar__volumn {
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          width: 60px;
+          a {
+              display: block;
+          }
+      }
+  }
+}

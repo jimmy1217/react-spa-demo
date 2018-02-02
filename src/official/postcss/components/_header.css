@@ -1,0 +1,174 @@
+#header {
+    background: #fff;
+    height: 5em;
+    left: 0;
+    line-height: 5em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.075);
+    text-align: center;
+}
+
+#header nav {
+    position: absolute;
+    top: 0;
+    height: inherit;
+    line-height: inherit;
+}
+
+#header nav .button {
+    padding: 0 2em;
+    height: 3.25em;
+    line-height: 3.25em;
+}
+
+#header nav a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+#header nav a[href="#menu"] {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 2em;
+    color: #dee1e3;
+    z-index: 5;
+}
+
+#header nav a[href="#menu"]:before {
+    content: "\2630";
+}
+
+#header nav a[href="#menu"] span {
+    display: none;
+}
+
+#header nav a[href="#menu"]:before {
+    margin: 0 0.5em 0 0;
+}
+
+@media screen and (max-width: 980px) {
+    #header {
+        height: 44px;
+        line-height: 44px;
+    }
+    #header nav a[href="#menu"] {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #header {
+        min-width: 320px;
+    }
+}
+
+
+#header {
+  transition: height .8s, background-color .8s;
+  line-height: normal;
+  min-width: 100%;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  &.isOpen {
+      .container {
+          transform: translate3d(-$menu-width, 0, 0);
+          backface-visibility: hidden;
+          will-change: transform;
+      }
+  }
+  nav {
+      height: auto;
+      &.left {
+          top: 4px;
+          right: .5em;
+      }
+  }
+  .container {
+      padding: 0;
+      transform: translate3d(0, 0, 0);
+      transition: transform $menu-transition;
+      @media screen and (min-width: $screen-md-min) {
+          padding-left: 15px;
+          padding-right: 15px;
+      }
+  }
+  .newLogo {
+      position: absolute;
+      font-size: 32px;
+      color:$deep-green;
+      top: 30px;
+      left:15px;
+      background-size: cover;
+      transition: all .3s;
+      display: inline-block;
+      @media screen and (max-width: $screen-lg-min) {
+          position: relative;
+          left:0;   
+          top: -3px;
+      }
+  } 
+  #top_menu_list ul {
+      list-style: none;
+      float: right;
+      margin: 0;
+      li {
+          margin: 45px 5px 0 5px;
+          display: inline-block;
+          font-size: 14px;
+          padding: 5px 10px;
+          &.active {
+              border-bottom: 2px solid $deep-green;
+          }
+          a {
+              color: $deep-grey;
+              text-decoration: none;
+              &.login {
+                  color: #fff;
+                  background-color: $deep-green;
+                  border-radius: 5px;
+                  padding: 5px 20px;
+                  display: block;
+                  &:hover {
+                      opacity: .8;
+                  }
+              }
+          }
+      }
+  }
+  &.bg-deep-grey {
+      .newLogo {
+          color:#fff;
+          @media screen and (min-width: $screen-lg-min) {
+              font-size: 40px;
+              top:23px;
+          }
+      }
+      #top_menu_list {
+          li {
+              &.active {
+                  border-bottom: 2px solid #fff;
+              }
+              a {
+                  color: #fff;
+                  &.login {
+                      color: #5a5a5a;
+                      background-color: #fff;
+                  }
+              }
+          }
+      }
+  }
+  @media screen and (min-width: $screen-lg-min) {
+      #mobile_menu {
+          display: none;
+      }
+  }
+  @media screen and (max-width: $screen-lg-min) {
+      #top_menu_list ul {
+          display: none;
+      }
+  }
+}

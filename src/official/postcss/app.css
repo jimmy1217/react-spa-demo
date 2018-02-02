@@ -1,0 +1,150 @@
+@charset "UTF-8";
+@import url(./css/basic_grid.css);
+
+@import './_var';
+@import './_font';
+@import './_oocss';
+@import './_button';
+@import './_icon';
+@import './_pic';
+@import './_form';
+@import './_progress';
+
+/* components */
+@import './components/_header';
+@import './components/_footer';
+@import './components/_video';
+@import './components/_menu';
+
+/* page */
+@import 'pageIndex';
+@import 'pageService';
+@import 'pageContact';
+@import 'pageAbout';
+
+html,
+body,
+#root,
+#mainContent {
+    height: 100%;
+}
+
+/* Basic */
+
+@-ms-viewport {
+    width: device-width;
+}
+
+body {
+    -ms-overflow-style: scrollbar;
+    background: #fff;
+    font-size: 13pt;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media screen and (max-width: 480px) {
+    html,
+    body {
+        min-width: 320px;
+    }
+}
+
+body,
+input,
+select,
+textarea {
+    color: #767d85;
+    font-family:Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 13pt;
+    font-weight: 300;
+    line-height: 1.65;
+}
+
+pre {
+    font-family:Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+#root {
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    #mainContent {
+        padding-top: 5em;
+        transition: transform $menu-transition;
+        will-change: transform;
+        @media screen and (max-width: 980px) {
+            padding-top: 44px;
+        }
+        &.menuOpen {
+            transform: translate3d(-$menu-width, 0, 0);
+        }
+        >div {
+            height: 100%;
+        }
+        #menu {
+            opacity: 0;
+            &.visible {
+                opacity: 1;
+            }
+        }
+    }
+    .fa {
+        font: normal normal normal 14px/1 FontAwesome;
+    }
+    .text-en {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    }
+}
+
+.wrapper {
+    padding: 4em 0;
+    min-height: 100%;
+}
+
+.centerPic {
+    width: 70%;
+    margin: 0 auto;
+    @media screen and (min-width: $screen-md-min) {
+        width: 400px;
+    }
+}
+
+.mobileCenterPic {
+    width: 100%;
+    text-align: center;
+    @media screen and (min-width: $screen-md-min) {
+        text-align: right;
+    }
+}
+
+.mobileCenterText {
+    text-align: center;
+    .inline-block {
+        text-align: left;
+    }
+    @media screen and (min-width: $screen-md-min) {
+        text-align: left;
+    }
+}
+
+ /* 定義overlay */
+.overlay {
+    &.visible {
+        height: 100%;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 3;
+        .overlayContent {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+

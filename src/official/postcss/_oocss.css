@@ -1,0 +1,240 @@
+@for $i from 1 to 8 {
+    .t-$i {
+        transform: translateY($(i)px);
+    }
+    .l-$i {
+        transform: translateX($(i)px);
+    }
+    .b-$i {
+        transform: translateY(-$(i)px);
+    }
+    .r-$i {
+        transform: translateX(-$(i)px);
+    }
+    .ls-$i {
+        letter-spacing: $(i)px !important;
+    }
+}
+
+@for $i from 9 to 16 {
+    .t-$i {
+        transform: translateY($(i)px);
+    }
+    .l-$i {
+        transform: translateX($(i)px);
+    }
+    .b-$i {
+        transform: translateY(-$(i)px);
+    }
+    .r-$i {
+        transform: translateX(-$(i)px);
+    }
+}
+
+@each $i in (5, 10, 15, 20, 25, 30, 35, 40) {
+    .mt-$(i) {
+        margin-top: $(i)px !important;
+    }
+    .mr-$(i) {
+        margin-right: $(i)px !important;
+    }
+    .ml-$(i) {
+        margin-left: $(i)px !important;
+    }
+    .mb-$(i) {
+        margin-bottom: $(i)px !important;
+    }
+    .pt-$(i) {
+        padding-top: $(i)px !important;
+    }
+    .pr-$(i) {
+        padding-right: $(i)px !important;
+    }
+    .pl-$(i) {
+        padding-left: $(i)px !important;
+    }
+    .pb-$(i) {
+        padding-bottom: $(i)px !important;
+    }
+}
+
+@each $i in (100, 200, 300, 400, 500, 600, 700, 800, 900) {
+    .fw-$(i) {
+        font-weight: $i !important;
+    } 
+}
+
+
+
+.clearfix {
+    clear: both;
+}
+
+
+/**
+  * ----- text color ------
+**/
+
+.text-white {
+    color: #fff !important;
+}
+
+.text-red {
+    color: $red !important;
+}
+
+.text-deep-green {
+    color: $deep-green !important;
+}
+
+.text-light-green {
+    color: $ligh-green !important;
+}
+
+.text-deep-grey {
+    color: $deep-grey !important;
+}
+
+
+/**
+  * ----- text align ------
+**/
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+
+/**
+  * ----- background color ------
+**/
+
+.bg-white {
+    background: #fff !important;
+}
+
+.bg-red {
+    background-color: $red !important;
+}
+
+.bg-deep-green {
+    background-color: $deep-green !important;
+}
+
+.bg-light-green {
+    background-color: $ligh-green !important;
+}
+
+.bg-deep-grey {
+    background-color: $deep-grey !important;
+}
+
+
+/**
+  * ----- box model ------
+**/
+.mt-100 {
+    margin-top:100px !important;
+}
+.mb-100 {
+    margin-bottom:100px !important;
+}
+
+
+.ml-50p {
+    margin-left: 50%;
+}
+
+.pl-0 {
+    padding-left: 0 !important;
+}
+
+.pr-0 {
+    padding-right: 0 !important;
+}
+
+.pt-0 {
+    padding-top: 0 !important;
+}
+
+.noPadding {
+    padding: 0 !important;
+}
+
+.inline-block {
+    display: inline-block !important;
+}
+
+.block {
+    display: block !important;
+}
+
+.vertical-bottom {
+    vertical-align: bottom;
+}
+
+
+/**
+  * ----- text shadow ------
+**/
+
+.w-shadow {
+    text-shadow: 0 0 20px #fff;
+}
+
+.b-shadow {
+    text-shadow: 0 0 10px #333;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.max740 {
+    max-width: 740px;
+}
+
+.bgCover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.defaultpd {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @media screen and (min-width: $screen-md-min) {
+        padding-top:100px;
+        padding-bottom: 100px;
+    }
+}
+
+.fw-900 {
+    font-weight: 900 !important;
+}
+
+.h100 {
+    height: 100%;
+}
+
+
+/**
+  * ----- transform performance ------
+**/
+
+.tz0 {
+    transform: translateZ(0);
+    will-change: transform;
+}

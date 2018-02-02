@@ -1,0 +1,36 @@
+#pageContact {
+  min-height: 90vh;
+  padding-top: 40px;
+  @media screen and (min-width: $screen-md-min) {
+      padding-top: 100px;
+  }
+  .container {
+      max-width: 750px;
+  }
+  .flex {
+      display: flex;
+      flex-direction: column;
+      @media screen and (min-width: $screen-md-min) {
+          flex-direction: row;
+      }
+      .flex-title {
+          flex:1 1 auto;
+      }
+      .flex-content {
+          flex:7 1 auto;
+          textarea {
+              margin-top: 10px;
+          }
+      }
+  }
+  .contactInfo{
+      @media screen and (min-width: $screen-md-min) {
+          padding-right:60px;
+      }
+  }
+  .companyInfo{
+      @media screen and (min-width: $screen-md-min) {
+          padding-left:60px;
+      }
+  }
+}

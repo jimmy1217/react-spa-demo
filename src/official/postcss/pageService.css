@@ -1,0 +1,122 @@
+#pageService {
+    .topDefaultHeight{
+        min-height: 548px;
+        @media screen and (min-width: $screen-md-min) {
+            min-height: 450px;    
+        }
+    }
+    #serviceAnimContent1 {
+        min-height: 421px;
+        @media screen and (min-width: $screen-md-min) {
+            min-height: 519px;
+        }
+    }
+    .merchantNotification {
+        padding: 80px 0;
+        background-image: url('./../../../public/images/system-tree.png');
+    }
+    .info {
+        padding: 80px 0;
+        background-image: url('./../../../public/images/infoBg.png');
+    }
+    .bgSafe {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        .col-sm-6 {
+            &:first-child {
+                margin-bottom: 80px;
+                @media screen and (min-width: $screen-md-min) {
+                    margin-bottom:0;
+                    border-right: 1px solid #fff;
+                }
+            }
+        }
+    }
+    .sameHeight {
+        height: 250px;
+        @media screen and (min-width: $screen-md-min) {
+            height: 30vw;
+            max-height: 325px;
+        }
+    }
+    .bgRoom {
+        background-image: url('./../../../public/images/system-rooms.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+        @media screen and (min-width: $screen-md-min) {
+            background-position: top right;
+        }
+    }
+    .bgFlex {
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width: $screen-md-min) {
+            flex-direction: row;
+        }
+        .fbox41 {
+            flex: 4 1;
+        }
+        .fbox71 {
+            flex: 7 1;
+        }
+        .fbox51 {
+            flex: 5 1;
+        }
+        .titleBox {
+            background-color: #F7F8F8;
+            .centerFlex {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 100%;
+                justify-content: center;
+                margin: 40px 0;
+                @media screen and (min-width: $screen-md-min) {
+                    margin:0;
+                }
+            }
+        }
+        .roomStatus {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+            @media screen and (min-width: $screen-md-min) {
+                align-items: flex-start;
+                padding: 0 0 0 40px;
+            }
+        }
+        .fbox11 {
+            flex: 1 1;
+            background-color: #CECECE;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                height: 50%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                background-color: #969696;
+            }
+        }
+    }
+    .picAnalisis {
+        max-width: 400px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 150px;
+            height: 86px;
+            background-image: url('./../../../public/images/system-line.png');
+            background-size: cover;
+            right: 100%;
+            top: 10px;
+        }
+    }
+}
